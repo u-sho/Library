@@ -21,6 +21,14 @@ template <class Container>
     return v;
 }
 
+/* 重複の削除，破壊メソッド */
+template <class Container>
+void deduplicate(Container &v) {
+    std::sort(begin(v), end(v));
+    v.erase(std::unique(begin(v), end(v)), end(v));
+    return;
+}
+
 // tests----------------------------------------------------------------
 void abc098_b();  // stringの重複削除
 

@@ -1,4 +1,4 @@
-CXXFLAGS := -std=c++17 -Wall $(CXXFLAGS)
+CXXFLAGS := -std=c++17 -Wall -Wextra $(CXXFLAGS)
 
 %: %.cpp
-	/usr/local/bin/g++-10 $(CXXFLAGS) $< -o ./bin/$@
+	/usr/local/bin/g++ $(CXXFLAGS) $< -o ./bin/$@

@@ -22,9 +22,9 @@ std::istream &operator>>(std::istream &is, std::vector<T> &v) {
 }
 template <typename T>
 std::ostream &operator<<(std::ostream &os, const std::vector<T> &v) {
-    for (int i = 0; i < (int)v.size(); i++) {
-        // os << v.at(i) << (i + 1 != v.size() ? " " : ""); // 空白区切り
-        os << v.at(i) << "\n";  // 改行区切り
+    for (std::size_t i = 0; i < v.size(); i++) {
+        os << v[i] << (i + 1UL != v.size() ? " " : "");  // 空白区切り
+        // os << v[i] << "\n";  // 改行区切り
     }
     return os;
 }
